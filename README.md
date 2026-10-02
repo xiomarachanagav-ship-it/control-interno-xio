@@ -24,16 +24,16 @@ Abra `index.html` con un servidor estático o publíquelo en Render. No requiere
 
 `render.yaml` define el Static Site:
 
-- rama de producción: `production`;
+- rama de producción: `main`;
 - verificación de build: `npm run validate`;
 - directorio publicado: la raíz del repositorio (`.`);
 - despliegue automático: únicamente después de que los checks de GitHub hayan pasado (`checksPass`).
 
-Después de subir este proyecto a GitHub, cree el servicio desde **New → Blueprint** en Render y seleccione el repositorio y la rama `production`. Render leerá `render.yaml`. Con la integración GitHub–Render autorizada, cada cambio aprobado y fusionado en `production` se desplegará automáticamente. Render admite sitios estáticos con un directorio de publicación y puede desplegar automáticamente los pushes de la rama conectada. [Documentación de Render](https://render.com/docs/static-sites)
+Después de subir este proyecto a GitHub, cree el servicio desde **New → Blueprint** en Render y seleccione el repositorio y la rama `main`. Render leerá `render.yaml`. Con la integración GitHub–Render autorizada, cada cambio aprobado y fusionado en `main` se desplegará automáticamente. Render admite sitios estáticos con un directorio de publicación y puede desplegar automáticamente los pushes de la rama conectada. [Documentación de Render](https://render.com/docs/static-sites)
 
 ## CI/CD
 
-El workflow [`.github/workflows/ci.yml`](.github/workflows/ci.yml) ejecuta la validación en pull requests y en pushes a `production`. Proteja la rama `production` en GitHub y exija el check **Validate static dashboard / validate** antes de fusionar.
+El workflow [`.github/workflows/ci.yml`](.github/workflows/ci.yml) ejecuta la validación en pull requests y en pushes a `main`. Proteja la rama `main` en GitHub y exija el check **Validate static dashboard / validate** antes de fusionar.
 
 ## Riesgos conocidos
 
