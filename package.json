@@ -1,0 +1,13 @@
+{
+  "name": "electrovera-control-interno",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dashboard estático de indicadores de control interno.",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "npm run validate"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
