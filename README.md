@@ -9,6 +9,8 @@ Dashboard estático para consultar y registrar indicadores de control interno. E
 - **Comandos:** `npm run validate` analiza el HTML y el JavaScript, y verifica que no se hayan reintroducido las credenciales retiradas.
 - **Variables de entorno:** ninguna. `.env.example` documenta esta decisión; una aplicación estática no puede conservar secretos.
 - **Datos persistentes:** las mediciones se guardan en `localStorage` y la sesión de demostración en `sessionStorage`; ambos viven solo en el navegador del usuario. Las exportaciones y respaldos se descargan localmente.
+- **Perfil local:** cada usuario puede ajustar su nombre visible, nombre de inicio de sesión y contraseña desde **Mi perfil**. Los cambios se guardan solo en ese navegador.
+- **Control de revisiones:** cada indicador incluye una burbuja de revisiones para registrar comentarios con autor y fecha. También se guarda solo en el navegador actual.
 
 ## Uso local
 
@@ -43,6 +45,7 @@ Este repositorio se entrega como demostración funcional, no como sistema de pro
 - `localStorage` no es adecuado para información empresarial compartida, auditada o sensible; se pierde al limpiar el navegador y es editable por el usuario.
 - Los indicadores, riesgos y evidencias esperadas se publican dentro de `index.html`; confirme que pueden exponerse antes de hacer público el repositorio.
 - Las evidencias solo almacenan rutas o URLs; no existe validación, cifrado, auditoría ni control de retención.
+- Los perfiles, contraseñas y comentarios locales no se comparten entre dispositivos ni permiten auditoría centralizada. Para uso institucional deben migrarse a autenticación, API y base de datos seguras.
 - El archivo original incluía credenciales de prueba embebidas. Se retiraron y la validación bloquea campos de contraseña codificados en el cliente. Si esas claves se usaron fuera de este archivo, deben rotarse.
 
 Consulte [el plan de trabajo](docs/WORKPLAN.md) para la ruta de evolución hacia una solución multiusuario segura.
