@@ -2,7 +2,7 @@ services:
   - type: web
     name: electrovera-control-interno
     runtime: static
-    branch: production
+    branch: main
     buildCommand: npm run validate
     staticPublishPath: .
     autoDeployTrigger: checksPass
