@@ -43,6 +43,6 @@ Este repositorio se entrega como demostración funcional, no como sistema de pro
 - `localStorage` no es adecuado para información empresarial compartida, auditada o sensible; se pierde al limpiar el navegador y es editable por el usuario.
 - Los indicadores, riesgos y evidencias esperadas se publican dentro de `index.html`; confirme que pueden exponerse antes de hacer público el repositorio.
 - Las evidencias solo almacenan rutas o URLs; no existe validación, cifrado, auditoría ni control de retención.
-- El archivo original incluía credenciales de prueba embebidas. Se retiraron y la validación impide que se vuelvan a incorporar. Si esas claves se usaron fuera de este archivo, deben rotarse.
+- El archivo original incluía credenciales de prueba embebidas. Se retiraron y la validación bloquea campos de contraseña codificados en el cliente. Si esas claves se usaron fuera de este archivo, deben rotarse.
 
 Consulte [el plan de trabajo](docs/WORKPLAN.md) para la ruta de evolución hacia una solución multiusuario segura.
