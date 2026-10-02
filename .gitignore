@@ -1,0 +1,20 @@
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+coverage/
+dist/
+build/
+
+# Local/editor files
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Local project instructions and synced reference material
+AGENTS.md
+sources/
