@@ -2,11 +2,11 @@
 
 ## Flujo normal
 
-1. Cree una rama desde `production` con un nombre descriptivo.
+1. Cree una rama desde `main` con un nombre descriptivo.
 2. Haga el cambio y ejecute `npm run validate`.
 3. Abra un pull request. La validación de GitHub Actions debe finalizar correctamente.
 4. Revise funcionalidad, accesibilidad y cualquier dato sensible mostrado.
-5. Acepte el pull request hacia `production`.
+5. Acepte el pull request hacia `main`.
 6. Render desplegará automáticamente el commit cuando el chequeo de CI sea exitoso.
 
 ## Controles por tipo de cambio
